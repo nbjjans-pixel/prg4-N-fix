@@ -56,6 +56,10 @@ export class Level extends Scene {
             engine.goToScene('end');
         });
 
+        setTimeout(() => {
+            engine.goToScene('end');
+        }, 110000);
+
         this.spawnScoreUI();
         this.spawnHitbox();
 
@@ -64,7 +68,7 @@ export class Level extends Scene {
             this.spawnMirroredBar();
         }, 10000);
 
-        this.beatTracker = new BeatTracker('/audio/Samba de Amigo - Samba de Janeiro.mp3', 133, () => this.spawnBlock());
+        this.beatTracker = new BeatTracker('audio/Samba de Amigo - Samba de Janeiro.mp3', 133, () => this.spawnBlock());
         this.beatTracker.start();
     }
 

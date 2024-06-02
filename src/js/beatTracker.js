@@ -6,7 +6,7 @@ export class BeatTracker {
         this.onBeatCallback = onBeatCallback;
         this.beatInterval = (60 / bpm) * 1000;
         this.audio = new Howl({
-            src: ['/audio/Samba de Amigo - Samba de Janeiro.mp3'],
+            src: ['audio/Samba de Amigo - Samba de Janeiro.mp3'],
             onplay: () => this.startBeatTracking(),
             onend: () => this.stopBeatTracking()
         });
